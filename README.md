@@ -57,7 +57,9 @@ The `ls` command can be used to check if a file (or directory) exists, because t
 **What does a terminal window look like?** <br>
 Regardless of which operating system you use, your terminal window should look something like this.
 
-!['Terminal','Terminal window screenshot'](/terminal.png)
+(/terminal.png)
+
+!['Terminal','Terminal window screenshot'](https://softcover.s3.amazonaws.com/636/learn_enough_command_line/images/figures/terminal_window.png)
 
 Every command line starts with some symbol or symbols designed to “prompt” you to action. The prompt usually ends with a `$` or a `%`, and is preceded by information that depends on the details of your system. For example:
 
