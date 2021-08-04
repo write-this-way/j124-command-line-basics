@@ -26,12 +26,26 @@ You can open a terminal window using the macOS application Spotlight, which you 
 *Windows*
 The recommended option is to install Linux (which, Microsoft supports natively). Once Linux is installed, you should look for a terminal icon in your menubar. Click the icon to launch a terminal window.
 
-**How do I get into a specific file directory on the command line? **
+**How do I get into a specific file directory on the command line (on a Mac)?**
 1. Open Finder. Click on the folder you want to open in terminal.
-2. Click `Ctrl + C` to copy the name of the folder to the clipboard.
-3. Open a terminal window. After the `%`, type `cd` and click the space once. Then click `Ctrl + C` to paste in the name of the folder.
+2. Click `Command + C` to copy the name of the folder to the clipboard.
+3. Open a terminal window. After the `%`, type `cd` and click the space once. Then click `Command + C` to paste in the name of the folder.
 4. Click `Return`. 
-5. Look at the file location listed before the `%`. It should be the name of the folder you pasted in. Type `pwd` to confirm where you are in the file structure.
+5. Look at the file location listed before the `%`. It should be the name of the folder you pasted in. 
+
+**Where am I?**
+Type `pwd` to confirm where you are in the file structure.
+
+**What files are in my directory?**
+`$ ls`
+Long listing of all the files and directories in the current directory *except* for those that are hidden.
+
+`$ ls -a`
+Long listing of all the files and directories in the current *including* those that are hidden.
+
+The `ls` command can be used to check if a file (or directory) exists, because trying to `ls` followed by a nonexistent file name results in an error message,
+
+
 
 **What does a terminal window look like?**
 Regardless of which operating system you use, your terminal window should look something like this.
@@ -40,7 +54,46 @@ Regardless of which operating system you use, your terminal window should look s
 
 Every command line starts with some symbol or symbols designed to “prompt” you to action. The prompt usually ends with a `$` or a `%`, and is preceded by information that depends on the details of your system. For example:
 
-!['Prompt','Terminal window prompt screenshot'](/prompt.png)
+`danaamihere@MacBook-Pro / %`
 
+### Getting started with command line
+If your in the file location you want to be in, you're ready to run commands.
 
+**Print a statement**
+Print *hello, goodbye*
 
+```
+$ echo hello, goodbye
+hello, goodbye
+$ echo "hello, goodbye"
+hello, goodbye
+$
+```
+
+**Uh-oh...**
+What happens if there the quotation marks aren't matched in my command?
+
+```
+$ echo "hello, goodbye
+>
+```
+
+At this point, it seems we’re stuck. You can get out of trouble by clikcing `Ctrl + C`.
+
+**Redirecting and appending**
+Let's start with some text. We'll use the first line of Shakespeare’s first sonnet to work with.
+
+```
+$ echo "From fairest creatures we desire increase,"
+From fairest creatures we desire increase,
+```
+Create a file containing this line. You can do this without a text editor using the redirect operator, `>`.
+
+`$ echo "From fairest creatures we desire increase," > sonnet_1.txt`
+
+Did our command work? Use the `cat` command to dump the contents of the file to the screen:
+
+````
+$ cat sonnet_1.txt
+From fairest creatures we desire increase,
+```
