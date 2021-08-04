@@ -13,7 +13,8 @@ Command line cheatsheet for Intro to Data Journalism class
 | `cp <old> <new>` | Copy old to new                   | `$ cp foo bar`          |
 | `rm <file>`      | Remove (delete) file              | `$ rm foo`              |
 | `rm -f <file>`   | Force-remove file                 | `$ rm -f bar`           |
-| `pwd`            | Present working directory         | `$ pwd`           |
+| `pwd`            | Present working directory         | `$ pwd`                 |
+| `clear`          | Clear contents of terminal window | `$ clear`               |
 
 *Pro tip: Use a [table generator](https://www.tablesgenerator.com/markdown_tables#) to make a table this large and complex in Markdown.*
 
@@ -35,6 +36,11 @@ The recommended option is to install Linux (which, Microsoft supports natively).
 **What does a terminal window look like?**
 Regardless of which operating system you use, your terminal window should look something like this.
 
-!['Terminal','Terminal window screenshot'](/terminal.jpg)
+!['Terminal','Terminal window screenshot'](/terminal.png)
+
+Every command line starts with some symbol or symbols designed to “prompt” you to action. The prompt usually ends with a `$` or a `%`, and is preceded by information that depends on the details of your system. For example:
+
+!['Prompt','Terminal window prompt screenshot'](/prompt.png)
+
 
 
