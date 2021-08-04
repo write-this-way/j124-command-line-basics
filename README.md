@@ -33,11 +33,12 @@ The recommended option is to install Linux (which, Microsoft supports natively).
 4. Click `Return`. 
 5. Look at the file location listed before the `%`. It should be the name of the folder you pasted in. 
 
-**Where am I?**
+**Where am I?** <br>
 Type `pwd` to confirm where you are in the file structure.
 
-**What files are in my directory?**
-`$ ls`
+**What files are in my directory?** <br>
+
+`$ ls` 
 Long listing of all the files and directories in the current directory *except* for those that are hidden.
 
 `$ ls -a`
@@ -47,7 +48,7 @@ The `ls` command can be used to check if a file (or directory) exists, because t
 
 
 
-**What does a terminal window look like?**
+**What does a terminal window look like?** <br>
 Regardless of which operating system you use, your terminal window should look something like this.
 
 !['Terminal','Terminal window screenshot'](/terminal.png)
@@ -56,10 +57,10 @@ Every command line starts with some symbol or symbols designed to “prompt” y
 
 `danaamihere@MacBook-Pro / %`
 
-### Getting started with command line
+### Getting started with command line <br>
 If your in the file location you want to be in, you're ready to run commands.
 
-**Print a statement**
+**Print a statement** <br>
 Print *hello, goodbye*
 
 ```
@@ -70,7 +71,7 @@ hello, goodbye
 $
 ```
 
-**Uh-oh...**
+**Uh-oh...** <br>
 What happens if there the quotation marks aren't matched in my command?
 
 ```
@@ -80,7 +81,7 @@ $ echo "hello, goodbye
 
 At this point, it seems we’re stuck. You can get out of trouble by clikcing `Ctrl + C`.
 
-**Redirecting and appending**
+**Redirecting and appending** <br>
 Let's start with some text. We'll use the first line of Shakespeare’s first sonnet to work with.
 
 ```
@@ -91,9 +92,12 @@ Create a file containing this line. You can do this without a text editor using 
 
 `$ echo "From fairest creatures we desire increase," > sonnet_1.txt`
 
-Did our command work? Use the `cat` command to dump the contents of the file to the screen:
+Did our command work? Use the `cat` command. The name `cat` is short for “concatenate”, which is a hint that it can be used to combine the contents of multiple files, but it can also be used as a “quick-and-dirty” way to dump the contents of a single file to the screen. 
 
-````
+```
 $ cat sonnet_1.txt
 From fairest creatures we desire increase,
 ```
+
+In order to add the second line of the sonnet (in modernized spelling), we can use the append operator >>
+`$ echo "That thereby beauty's Rose might never die," >> sonnet_1.txt`
