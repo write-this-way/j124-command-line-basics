@@ -42,11 +42,17 @@ Type `pwd` to confirm where you are in the file structure.
 Long listing of all the files and directories in the current directory *except* for those that are hidden.
 
 `$ ls -a`
-Long listing of all the files and directories in the current *including* those that are hidden.
+Long listing of all the files and directories in the current *including* those that are hidden. 
+
+Unix has the concept of “hidden files (and directories)”, which don’t show up by default when listing files. Hidden files and directories are identified by starting with a dot ., and are commonly used for things like storing user preferences.
+
+```
+$ ls -a
+.           .gitignore      sonnet_1_reversed.txt
+..          sonnet_1.txt
+```
 
 The `ls` command can be used to check if a file (or directory) exists, because trying to `ls` followed by a nonexistent file name results in an error message,
-
-
 
 **What does a terminal window look like?** <br>
 Regardless of which operating system you use, your terminal window should look something like this.
@@ -101,3 +107,10 @@ From fairest creatures we desire increase,
 
 In order to add the second line of the sonnet (in modernized spelling), we can use the append operator >>
 `$ echo "That thereby beauty's Rose might never die," >> sonnet_1.txt`
+
+And here's the result: 
+```
+$ cat sonnet_1.txt
+From fairest creatures we desire increase,
+That thereby beauty's Rose might never die,
+```
