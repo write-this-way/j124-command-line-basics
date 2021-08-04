@@ -16,6 +16,8 @@ Command line cheatsheet for Intro to Data Journalism class
 | `pwd`            | Present working directory         | `$ pwd`                 |
 | `clear`          | Clear contents of terminal window | `$ clear`               |
 
+Find more commands [here](https://github.com/0nn0/terminal-mac-cheatsheet#english-version).
+
 *Pro tip: Use a [table generator](https://www.tablesgenerator.com/markdown_tables#) to make a table this large and complex in Markdown.*
 
 **How do I find the command line on my computer?**
